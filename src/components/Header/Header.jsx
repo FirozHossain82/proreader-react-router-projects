@@ -139,7 +139,7 @@ const Header = () => {
                           href="/"
                           aria-label="Home"
                           title="Home"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                         >
                           Home
                         </a>
@@ -149,7 +149,7 @@ const Header = () => {
                           href="/books"
                           aria-label="Books"
                           title="Books"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                         >
                           Books
                         </a>
@@ -159,7 +159,7 @@ const Header = () => {
                           href="/about"
                           aria-label="About Us"
                           title="About Us"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                         >
                           About Us
                         </a>
