@@ -7,11 +7,13 @@ import Main from "./components/Layout/Main.jsx";
 import Home from "./components/Home/Home.jsx";
 import About from "./components/AboutUs/About.jsx";
 import Books from "./components/Books/Books.jsx";
+import Errorpage from "./components/Errorpage/Errorpage.jsx";
 
 const router = createBrowserRouter([
   {
     path:'/',
     element:<Main></Main>,
+    errorElement:<Errorpage/>,
     children:[
       {
         path:'/',
