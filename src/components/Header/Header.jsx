@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="bg-lime-50">
+    <div className="bg-sky-200">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative  flex items-center justify-between">
           <Link
@@ -34,34 +34,46 @@ const Header = () => {
           </Link>
           <ul className="flex items-center hidden space-x-8 lg:flex ">
             <li>
-              <Link
+              <NavLink
                 to="/"
                 aria-label="Home"
                 title="Home"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-orange-500 "
+                className={({ isActive }) =>
+                  isActive
+                    ? " tracking-wide text-amber-500 font-bold text-lg transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    : "font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                }
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <a
+              <NavLink
                 to="/books"
                 aria-label="Books"
                 title="Books"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200  hover:text-orange-500 "
+                className={({ isActive }) =>
+                  isActive
+                    ? " tracking-wide text-purple-700 font-bold text-lg transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    : "font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                }
               >
                 Books
-              </a>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/about"
                 aria-label="About us"
                 title="About us"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-500"
+                className={({ isActive }) =>
+                  isActive
+                    ? " tracking-wide text-orange-700 font-bold text-lg transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    : "font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                }
               >
                 About us
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <div className="lg:hidden">
@@ -88,7 +100,7 @@ const Header = () => {
             </button>
             {isMenuOpen && (
               <div className="absolute top-0 left-0 w-full">
-                <div className="p-5 bg-white border rounded-md shadow-md">
+                <div className="p-5 bg-sky-200 border rounded-md shadow-md">
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <Link
