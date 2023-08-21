@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Book = () => {
-    return (
-        <div>
-            <h1>This is book page</h1>
-        </div>
-    );
+const Book = ({ book }) => {
+  const { title, isbn13, price, image, subtitle } = book;
+  return (
+    <Link to={`/book/${price}`} aria-label="View Item">
+     
+    </Link>
+  );
 };
 
 export default Book;
