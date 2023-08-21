@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         {
             path:'/book/:bookId',
             element:<BookDetails/>,
-            loader:({params}) => fetch(`https://api.itbook.store/1.0/new/${params.bookId}`)
+            loader:({params}) => fetch(`https://api.itbook.store/1.0/books/${params.bookId}`)
         }
       ]
     }
